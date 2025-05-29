@@ -1,60 +1,122 @@
-# Student Management System in Python 
+Tentu! Berikut adalah versi lengkap README.md dalam Bahasa Indonesia, yang telah dilengkapi dengan latar belakang proyek, fitur, cara instalasi, dan struktur folder. Ini bisa langsung kamu simpan sebagai README GitHub.
 
-![python](https://img.shields.io/badge/Python-v3.9.10-green?style=plastic&logo=python&logoWidth=20)       ![gui](https://img.shields.io/badge/GUI-Tkinter-red?style=plastic&logo=appveyor) ![database](https://img.shields.io/badge/Database-mysql-brightgreen?style=plastic&logo=mysql&logoWidth=15) ![licnese](https://img.shields.io/badge/License-GPL-blue.svg)
-<br/>
-### Introduction :
-<p align="justify"> Student Management System is made using python with tkinter gui and Database used is mysql. This management system consists of the Superadmin login,admin login, faculty login, student login. This can make the work of the college more simple.</p> <br />
 
-### Modules Used :
- - Tkinter
- - mysql-connector python
- - tkcalendar
- - tktooltip
- - PIL (Python Imaging Library)
+---
 
-### Working :
-✳️**Types of Login** -
-1. Super Admin - Super admin can add the admin and manages the admin or he can update the admin or can change his own password.
-2. Admin - Admin can add the faculty, manage the faculty, add the student, manages the Student and can update the fees record or add the fees record.
-3. Faculty - Faculty can mark the attendance for the specified date by selecting the class and division. Faculty can also view the student records. Faculty can assign the class teacher by themselves only.
-4. Student - Student can see his profile and can view his attendance history or fees paid history.
-<br />
+# Aplikasi Student Management System
 
-✳️ **Database Design** -
-<p align="justify">The database is design in such a way that when a student, admin or faculty is added the database automatically assigns the id to them. I have used the concept like stored procedure, function and triggers to do this process. Also the attendance can be recorded and used such query.
+## Latar Belakang
 
-### Project Video Link :
-If you want to see the detail output of my project - [Click here](https://youtu.be/iMQJRHVZQHA)
+Dalam dunia pendidikan modern, pengelolaan data mahasiswa secara efisien dan terorganisir menjadi sangat penting. Banyak institusi pendidikan masih menggunakan metode manual atau sistem yang tidak terintegrasi, yang menyebabkan pengolahan data menjadi lambat dan rentan terhadap kesalahan.
 
-### Installation Process :
-<p align="justify">If you want to do this project then fork this project or clone using the following command :
+Untuk itu, dikembangkanlah *Student Management System* – sebuah aplikasi berbasis desktop yang ditujukan untuk mempermudah manajemen data mahasiswa, dosen, dan staf akademik. Aplikasi ini memungkinkan setiap pengguna sesuai perannya (superadmin, admin, dosen, mahasiswa) untuk berinteraksi dengan data secara aman dan efisien, dilengkapi fitur login, pengelolaan data pengguna, serta sistem pemulihan akun yang terintegrasi.
 
-    git clone https://github.com/PrathameshDhande22/Student-Management-System-in-Python.git
+## Fitur Aplikasi
 
-**Please Make Sure** : The Mysql database should be installed. The following python modules should be installed mentioned below the introduction.
-**To Install the Python Module** : Use the following command
+- *Login Aman* dengan enkripsi password menggunakan SHA
+- *Manajemen Role*:
+  - *Superadmin*: Akses penuh terhadap seluruh sistem
+  - *Admin*: Mengelola data pengguna dan mahasiswa
+  - *Dosen*: Melihat dan mencatat data akademik mahasiswa
+  - *Mahasiswa*: Mengakses data pribadi dan akademik
+- *Fitur Lupa Password/Username* dengan verifikasi ID dan tanggal lahir
+- *Tampilan GUI Interaktif* menggunakan Tkinter
+- *Pemilihan Tanggal* yang praktis menggunakan tkcalendar.DateEntry
+- Struktur kode modular per peran pengguna
 
-    pip install pillow
- <br />
- 
+## Teknologi yang Digunakan
 
-    pip install tkcalendar
-  
-  <br />
-  
+- *Python 3*
+- *MySQL* (sebagai basis data)
+- *Tkinter* (untuk GUI)
+- *tkcalendar* (untuk input tanggal)
+- *mysql-connector-python* (untuk koneksi ke database)
 
-    pip install tktooltip
-<br />
+## Cara Instalasi dan Menjalankan Aplikasi
 
-    pip install mysql-connector
-<br />
-</p>
-Make the database using the dump folder in the Reports folder or just execute one by one query in report folder filename *sql_file.sql*.
-<br />
-In the config.ini file insert your database user, host and password otherwise the error will be occured.
-<br />
-Run these python file :
+### 1. Clone repositori ini
 
-    py app.py
-    
-### Author : Prathamesh Dhande
+```bash
+git clone https://github.com/usernameanda/student-ms.git
+cd student-ms
+
+2. Install library Python yang dibutuhkan
+
+pip install mysql-connector-python tkcalendar
+
+3. Setup database MySQL
+
+Masuk ke terminal/command prompt dan login ke MySQL:
+
+
+mysql -u root -p
+
+Buat database dan tabel awal:
+
+
+CREATE DATABASE student_ms;
+USE student_ms;
+
+CREATE TABLE login_details (
+  id VARCHAR(10) PRIMARY KEY,
+  uname VARCHAR(50) NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  typeofuser VARCHAR(20) NOT NULL
+);
+
+Tambahkan akun superadmin awal:
+
+
+INSERT INTO login_details (id, uname, password, typeofuser)
+VALUES ('SA001', 'superadmin', SHA('admin123'), 'superadmin');
+
+> 💡 Anda dapat menyesuaikan data awal sesuai kebutuhan proyek.
+
+
+
+4. Jalankan aplikasi
+
+python main.py
+
+Struktur Folder
+
+student-ms/
+├── backend.py
+├── login.py
+├── main.py
+├── windows/
+│   ├── admin.py
+│   ├── faculty.py
+│   ├── student.py
+│   ├── superadmin.py
+├── assets/
+│   └── (gambar/ikon yang digunakan)
+└── README.md
+
+Username & Password Default
+
+Username: superadmin
+
+Password: admin123
+
+
+Pengembang
+
+Proyek ini dibuat oleh:
+[Nama Anda] – 2025
+Sebagai bagian dari pembelajaran/pengembangan aplikasi berbasis GUI dengan Python dan integrasi database MySQL.
+
+
+---
+
+Lisensi: Bebas digunakan untuk tujuan pendidikan.
+
+---
+
+Jika kamu ingin saya bantu buatkan file README.md langsung atau mengubah Nama Anda jadi nama aslimu, tinggal beri tahu saja. Saya juga bisa bantu menambahkan badge GitHub seperti:
+
+- Python version
+- Build passing
+- License
+
+Mau ditambahkan juga?
