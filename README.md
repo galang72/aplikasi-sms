@@ -32,8 +32,8 @@ Untuk itu, dikembangkanlah *Student Management System* – sebuah aplikasi berba
 ### 1. Clone repositori ini
 
 ```bash
-git clone https://github.com/usernameanda/student-ms.git
-cd student-ms
+git clone https://https://github.com/galang72/aplikasi-sms.git
+cd aplikasi-sms
 ```
 
 2. Install library Python yang dibutuhkan
