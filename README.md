@@ -1,8 +1,3 @@
-Tentu! Berikut adalah versi lengkap README.md dalam Bahasa Indonesia, yang telah dilengkapi dengan latar belakang proyek, fitur, cara instalasi, dan struktur folder. Ini bisa langsung kamu simpan sebagai README GitHub.
-
-
----
-
 # Aplikasi Student Management System
 
 ## Latar Belakang
@@ -39,12 +34,14 @@ Untuk itu, dikembangkanlah *Student Management System* – sebuah aplikasi berba
 ```bash
 git clone https://github.com/usernameanda/student-ms.git
 cd student-ms
+```
 
 2. Install library Python yang dibutuhkan
-
+```bash
 pip install mysql-connector-python tkcalendar
-
+```
 3. Setup database MySQL
+
 
 Masuk ke terminal/command prompt dan login ke MySQL:
 
@@ -102,8 +99,8 @@ Password: admin123
 
 Pengembang
 
-Proyek ini dibuat oleh:
-[Nama Anda] – 2025
+Proyek ini dibuat oleh: 
+[Galang lian kagura] – 2025
 Sebagai bagian dari pembelajaran/pengembangan aplikasi berbasis GUI dengan Python dan integrasi database MySQL.
 
 
@@ -111,12 +108,4 @@ Sebagai bagian dari pembelajaran/pengembangan aplikasi berbasis GUI dengan Pytho
 
 Lisensi: Bebas digunakan untuk tujuan pendidikan.
 
----
 
-Jika kamu ingin saya bantu buatkan file README.md langsung atau mengubah Nama Anda jadi nama aslimu, tinggal beri tahu saja. Saya juga bisa bantu menambahkan badge GitHub seperti:
-
-- Python version
-- Build passing
-- License
-
-Mau ditambahkan juga?
